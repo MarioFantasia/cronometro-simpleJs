@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- font-awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- /font-awesome -->
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- /bootstrap -->
+        <link rel="stylesheet" href="css/style.css">
+        <title>Cronometro</title>
+    </head>
+    <body>
+        <main class="flex">
+            <div class="container">
+                <h1>Cronometro</h1>
+                <div class="row">
+                    <div class="col-lg-4 col-12 c_flex">
+                        <div class="chronometer flex">
+                            <div class="cont_time">
+                                <h2 id="timerCont">00 : 00 : 00 : 00</h2>
+                            </div>
+                        </div>
+                        <div class="button flex">
+                            <i id="play" class="fas fa-play-circle" onclick="startTimer();"></i>
+                            <i id="stop" class="fas fa-stop-circle" onclick="stopTimer();"></i>
+                            <i id="pause" class="fas fa-pause-circle" onclick="pauseTimer();"></i>
+                            <i id="takeLap"class="fas fa-redo-alt" onclick="takeLap();"></i>
+                        </div>
+                        <h2 id="resetAll" class="resetAll" onclick="resetLaps();"></h2>
+                    </div>
+                    <div class="col-lg-8 col-12 c_flex times">
+                        <h2>TEMPI</h2>
+                        <div id="time_laps" class="timeStep"></div>
+                        <div id="positions"></div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <script src="js/main.js"></script>
+    </body>
+</html>
